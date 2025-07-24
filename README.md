@@ -14,3 +14,10 @@ Aplikasi berbasis web dengan html,css,tailwindcss,js
 
 - [@rizyoff](https://www.github.com/rizyoff)
 
+## Project Run
+
+ project run
+
+```bash
+  https://rizyoff.github.io/ToDoList-rizyoff/
+```
