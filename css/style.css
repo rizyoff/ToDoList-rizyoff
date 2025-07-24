@@ -1,0 +1,25 @@
+.box_input input{
+  height: 5vh;
+  /* width: 10vh; */
+  margin-inline: 5px;
+}
+
+.button{
+  width: 5vh ;
+  height: 5vh;
+}
+
+
+.container_box{
+  background-color: rgb(60, 66, 71);
+
+}
+
+th,td{
+  color: aliceblue;
+  padding: 10px;
+}
+body{
+  background-color: rgb(2, 15, 34);
+}
+

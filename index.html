@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Aplikasi Todo List</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body>
+    <main class="min-h-screen flex items-center justify-center p-4">
+      <section
+        class="bg-slate-700 rounded-xl p-6 w-full max-w-lg shadow-lg shadow-indigo-900/50"
+      >
+        <h3 class="text-3xl text-center text-cyan-500 font-bold text-clifford">
+          Todo List
+        </h3>
+
+        <form id="todoForm" class="flex gap-3 mb-4 mt-4" autocomplete="off">
+          <input
+            type="text"
+            id="taskInput"
+            placeholder="Add a todo . . ."
+            class="flex-grow bg-slate-900 border border-indigo-500 rounded-md px-3 py-2 text-indigo-200 placeholder-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            required
+            aria-label="To-Do task description"
+          />
+          <input
+            type="date"
+            id="dateInput"
+            class="bg-slate-900 border border-indigo-500 rounded-md px-3 py-2 text-indigo-200 placeholder-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            aria-label="Task due date"
+            required
+          />
+          <button
+            type="submit"
+            class="bg-indigo-500 hover:bg-indigo-600 text-indigo-100 rounded-md w-12 flex items-center justify-center font-bold text-xl select-none"
+            aria-label="Add new todo"
+            id="addTodoBtn"
+            title="Add todo"
+          >
+            +
+          </button>
+        </form>
+
+        <div class="flex justify-between mb-3">
+          <button
+            id="filterBtn"
+            class="bg-slate-900 text-indigo-400 hover:text-indigo-100 font-semibold rounded px-3 py-1 select-none focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            aria-label="Toggle filter completed tasks"
+          >
+            Filter
+          </button>
+          <button
+            id="deleteAllBtn"
+            class="bg-indigo-500 hover:bg-indigo-600 text-indigo-100 font-semibold rounded px-3 py-1 select-none focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            aria-label="Delete all todos"
+          >
+            Delete All
+          </button>
+        </div>
+        <div
+          class="overflow-y-auto max-h-80 rounded-md border border-indigo-800 bg-slate-800"
+        >
+          <table aria-label="To-Do List Table"  role="grid" class="w-full ">
+            <thead class="">
+              <tr>
+                <th scope="col">TASK</th>
+                <th scope="col">DUE DATE</th>
+                <th scope="col">STATUS</th>
+                <th scope="col">ACTIONS</th>
+              </tr>
+            </thead>
+            <tbody id="todoList" class="divide-y divide-indigo-900">
+              <trc>
+                <td
+                  colspan="4"
+                  class="text-center text-indigo-400 py-4 select-none"
+                  id="emptyMsg"
+                >
+                  No task found
+                </td>
+              </trc>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="js/script.js"></script>
+</html>
